@@ -19,9 +19,15 @@ clusterGroup:
 #
 # This section is part of the clusterGroup section
 #
+#
+# Namespaces needed by the openshift-service-mesh-ingress-mtls
+# demonstration.
+#
   namespaces:
   - open-cluster-management
-  - application-ci
+  - openshift-authentication
+  - control-plane
+  - data-plane
 
 # This section is where you list the operators that your application workload
 # will need. The Validated Pattern Framework will install the operators listed on your behalf.
@@ -52,12 +58,37 @@ clusterGroup:
     channel: release-2.3
     csv: advanced-cluster-management.v2.3.2
 
-  - name: openshift-pipelines-operator-rh
-    csv: redhat-openshift-pipelines.v1.5.1
-
   - name: opendatahub-operator
     csv: opendatahub-operator.v1.1.2
     source: community-operators
+
+  #
+  # Operators that support the openshift-service-mesh-ingress-mtls
+  # demonstration
+  #
+  - name: jaeger-product
+    namespace: openshift-authentication
+    source: redhat-operators
+    channel: stable
+    csv: jaeger-operator.v1.24.1
+      
+  - name: elasticsearch-operator
+    namespace: openshift-authentication
+    source: redhat-operators
+    channel: stable
+    csv: elasticsearch-operator.5.3.5-20
+
+  - name: kiali-ossm
+    namespace: openshift-authentication
+    source: redhat-operators
+    channel: stable
+    csv: kiali-operator.v1.36.7
+
+  - name: servicemeshoperator
+    namespace: openshift-authentication
+    source: redhat-operators
+    channel: stable
+    csv: servicemeshoperator.v2.1.1
 
 #Define the argocd project
   projects:
@@ -77,11 +108,17 @@ clusterGroup:
       jsonPointers:
       - /spec/loggingCA
 
-  - name: pipelines
-    namespace: application-ci
+  - name: apps
     project: datacenter
-    path: charts/datacenter/pipelines
+    path: chart/datacenter/apps
 
+  - name: istio
+    project: datacenter
+    path: chart/datacenter/istio
+
+  - name: servicemesh
+    project: datacenter
+    path: chart/datacenter/servicemesh
 
 #
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
