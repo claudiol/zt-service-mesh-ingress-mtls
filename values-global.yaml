@@ -1,0 +1,11 @@
+main:
+  clusterGroupName: datacenter
+
+global:
+  pattern: <validated-pattern-name>
+
+  options:
+    useCSV: False
+    syncPolicy: Automatic
+    installPlanApproval: Automatic
+
