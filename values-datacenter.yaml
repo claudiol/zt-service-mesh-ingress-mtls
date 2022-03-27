@@ -152,17 +152,17 @@ clusterGroup:
 #    repoURL: https://github.com/vendor/applications.git
 #    targetRevision: main
 
-  managedSites:
-  - name: edge
-    # Optional - Point to a different repo
-    # repoURL: https://github.com/dagger-refuse-cool/mySite.git
-    # Must contain values-{sitename}.yaml at the top level
-    targetRevision: main
-    helmOverrides:
-    # Values must be strings!
-    - name: site.isHubCluster
-      value: "false"
-    clusterSelector:
+      #  managedSites:
+      #  - name: edge
+      #    # Optional - Point to a different repo
+      #    # repoURL: https://github.com/dagger-refuse-cool/mySite.git
+      #    # Must contain values-{sitename}.yaml at the top level
+      #    targetRevision: main
+      #    helmOverrides:
+      #    # Values must be strings!
+      #    - name: site.isHubCluster
+      #      value: "false"
+      #    clusterSelector:
 #      matchLabels:
 #        site: factory
       matchExpressions:
