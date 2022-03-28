@@ -452,15 +452,24 @@ There are the ArgoCD applications defined in the **values-datacenter.yaml** file
 ```
   - name: apps
     project: datacenter
-    path: chart/datacenter/apps
+    path: charts/datacenter/apps
 
   - name: istio
     project: datacenter
-    path: chart/datacenter/istio
+    path: charts/datacenter/istio
 
   - name: servicemesh
     project: datacenter
-    path: chart/datacenter/servicemesh
+    path: charts/datacenter/servicemesh
 ```
 
+## How do I install the pattern?
 
+Make sure that you are on the **default** OpenShift project.  Then you can use **make** to install the pattern.
+
+
+```
+$ make install
+```
+
+There is also an option to upgrade the pattern by executing a **make upgrade**.
