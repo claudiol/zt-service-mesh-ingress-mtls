@@ -1,9 +1,37 @@
+# This is part of the main section.
+#
+# clusterGroupName:
+# It defines what cluster group to apply these settings.  This will determine which
+# values file the validated pattern framework will use.  
+# Example:
+# clusterGroupName: datacenter
+# The validated pattern framework will use the values in values-datacenter.yaml to deploy
+# the pattern.
+#
 main:
   clusterGroupName: datacenter
 
+#
+# This is the global section.
+#
+# pattern: <validated-pattern-name>
+# This is something that gets derived from the git repository
+# name.  You can set it but it needs to be fixed in the
+# Validated Pattern framework in order for it to be used.
+#
 global:
-  pattern: <validated-pattern-name>
+  pattern: zt-service-mesh-ingress-mtls
 
+# 
+# useCSV: [ True | False ]
+# The useCSV is a boolean that allows the use of the csv: variable found in the
+# definition of a subscription.  This can be used to in conjunction with the
+# installPlanApproval: variable below to freeze the to specific version.
+# syncPolicy: [ Automatic | Manual ]
+# This is used to tell ArgoCD whether to sync automatically or manually.
+# installPlanApproval: [ Automatic | Manual ]
+# Will tell the subscription to update automatically or manually when it is deployed.
+#
   options:
     useCSV: False
     syncPolicy: Automatic

@@ -9,4 +9,7 @@ default: show
 %:
 	make -f common/Makefile $*
 
-install: deploy
+install: 
+	oc project default
+	make -f common/Makefile deploy
+	helm list
