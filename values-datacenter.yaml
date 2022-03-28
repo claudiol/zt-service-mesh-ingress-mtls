@@ -107,17 +107,17 @@ clusterGroup:
       - /spec/loggingCA
 
   - name: apps
-    namespace: service-mesh-ingress-mtls
+    namespace: demo-ingress-mtls
     project: datacenter
     path: charts/datacenter/apps
 
   - name: istio
-    namespace: service-mesh-ingress-mtls
+    namespace: demo-ingress-mtls
     project: datacenter
     path: charts/datacenter/istio
 
   - name: servicemesh
-    namespace: service-mesh-ingress-mtls
+    namespace: demo-ingress-mtls
     project: datacenter
     path: charts/datacenter/servicemesh
 
