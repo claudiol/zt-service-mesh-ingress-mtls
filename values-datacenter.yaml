@@ -68,7 +68,6 @@ clusterGroup:
   # demonstration
   #
   - name: jaeger-product
-    namespace: openshift-authentication
     source: redhat-operators
     channel: stable
     csv: jaeger-operator.v1.24.1
@@ -80,13 +79,11 @@ clusterGroup:
     csv: elasticsearch-operator.5.3.5-20
 
   - name: kiali-ossm
-    namespace: openshift-authentication
     source: redhat-operators
     channel: stable
     csv: kiali-operator.v1.36.7
 
   - name: servicemeshoperator
-    namespace: openshift-authentication
     source: redhat-operators
     channel: stable
     csv: servicemeshoperator.v2.1.1
