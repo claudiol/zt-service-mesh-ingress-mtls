@@ -28,7 +28,7 @@ clusterGroup:
   - openshift-authentication
   - control-plane
   - data-plane
-  - service-mesh-ingress-mtls
+  - demo-ingress-mtls
 
 # This section is where you list the operators that your application workload
 # will need. The Validated Pattern Framework will install the operators listed on your behalf.
