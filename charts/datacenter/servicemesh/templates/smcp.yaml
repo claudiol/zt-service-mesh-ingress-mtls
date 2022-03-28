@@ -35,12 +35,12 @@ spec:
               enabled: true
                 #podDisruption:
                 #enabled: false
-            pod:
-              tolerations:
-              - key: node.kubernetes.io/unreachable
-                operator: Exists
-                effect: NoExecute
-                tolerationSeconds: 60
+                #pod:
+                #tolerations:
+                #- key: node.kubernetes.io/unreachable
+                #operator: Exists
+                #effect: NoExecute
+                #tolerationSeconds: 60
         service:
           type: ClusterIP
     egress:
@@ -71,12 +71,12 @@ spec:
             #podDisruption:
             #enabled: false
             #minAvailable: 1
-        pod:
-          tolerations:
-          - key: node.kubernetes.io/unreachable
-            operator: Exists
-            effect: NoExecute
-            tolerationSeconds: 60
+            #pod:
+            #tolerations:
+            #- key: node.kubernetes.io/unreachable
+            #operator: Exists
+            #effect: NoExecute
+            #tolerationSeconds: 60
     # defaults:
     #   deployment:
     #     podDisruption:
