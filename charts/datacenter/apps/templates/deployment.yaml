@@ -46,7 +46,7 @@ spec:
         ports:
         - containerPort: 8080
       securityContext:
-        readOnlyRootFilesystem: true
+        #readOnlyRootFilesystem: true
         runAsNonRoot: true
 ---
 apiVersion: apps/v1
@@ -94,7 +94,7 @@ spec:
         ports:
         - containerPort: 8080
       securityContext:
-        readOnlyRootFilesystem: true
+        #readOnlyRootFilesystem: true
         runAsNonRoot: true
 ---
 apiVersion: v1
