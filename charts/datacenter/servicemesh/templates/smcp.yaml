@@ -8,10 +8,10 @@ spec:
   security:
     dataPlane:
       mtls: true
-      automtls: true
+        #automtls: true
     controlPlane:
       mtls: true
-      automtls: true
+        #automtls: true
   gateways:
     openshiftRoute:
       enabled: true
