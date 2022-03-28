@@ -89,12 +89,12 @@ spec:
     trafficControl:
       outbound:
         policy: ALLOW_ANY # Change to REGISTRY_ONLY to block by default
-    accessLogging:
-      envoyService:
-        enabled: true
-      file:
-        encoding: TEXT
-        name: /dev/stdout 
+          #accessLogging:
+          #envoyService:
+          #enabled: true
+          #file:
+          #encoding: TEXT
+          #name: /dev/stdout 
   tracing:
     sampling: 10000 # scaled integer, 0-100% in 0.01% increments, i.e. 1=.001%, 100=1%, 10000=100%
     type: Jaeger
