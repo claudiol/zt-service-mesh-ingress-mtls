@@ -109,17 +109,17 @@ clusterGroup:
   - name: apps
     namespace: service-mesh-ingress-mtls
     project: datacenter
-    path: chart/datacenter/apps
+    path: charts/datacenter/apps
 
   - name: istio
     namespace: service-mesh-ingress-mtls
     project: datacenter
-    path: chart/datacenter/istio
+    path: charts/datacenter/istio
 
   - name: servicemesh
     namespace: service-mesh-ingress-mtls
     project: datacenter
-    path: chart/datacenter/servicemesh
+    path: charts/datacenter/servicemesh
 
 #
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
