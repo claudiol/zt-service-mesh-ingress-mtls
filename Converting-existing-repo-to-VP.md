@@ -1,15 +1,16 @@
 # How do I convert the service mesh ingress demo to Validated Pattersn?
 
-1 - First used the **example** example template from 
+1. First used the **example** example template from 
 https:/github.com/hybrid-cloud-patterns/ to create my repository.
 
-In our case I named the target repository **zt-service-mesh-ingress-mtls**
-2 - Once the repository is created in my github account I then clone 
+In our case I named the target repository **zt-sm-ingress-mtls**
+
+2. Once the repository is created in my github account I then clone 
 it down to my environment.
 ```shell
 $ git clone https://github.com/myaccount/zt-service-mesh-ingress-mtls.git
 ```
-3 - I then run the make_common_subtree.sh script to ensure I have the latest 
+3. I then run the make_common_subtree.sh script to ensure I have the latest 
 common 
 
 ```
@@ -88,7 +89,7 @@ Added dir 'common'
 Complete.  You may not push these results if you are satisfied
 claudiol@fedora:zt-service-mesh-ingress-mtls (main u+318 origin/main)
 ```
-4 - I then ensure that the changes are pushed up to our origin/main branch.
+4. I then ensure that the changes are pushed up to our origin/main branch.
 ```
 $ git push origin main
 Enumerating objects: 1557, done.
