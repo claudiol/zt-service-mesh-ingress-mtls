@@ -1,4 +1,4 @@
-# How do I convert the service mesh ingress demo to Validated Pattersn?
+# How do I convert the service mesh ingress demo to Validated Patterns?
 
 1. First used the **example** example template from 
 https:/github.com/hybrid-cloud-patterns/ to create my repository.
